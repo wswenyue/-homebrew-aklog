@@ -4,9 +4,9 @@
 class Aklog < Formula
   desc "Android developer's Swiss Army Knife for Log"
   homepage "https://github.com/wswenyue/aklog"
-  url "https://github.com/wswenyue/aklog/archive/v0.1.tar.gz"
-  sha256 "28cc789bb544e252fb5d9353ccb4f4cbcbeb36909e06bec8397b32cee7b6e0a8"
-  # depends_on "cmake" => :build
+  url "https://github.com/wswenyue/aklog/archive/v1.0.0.tar.gz"
+  sha256 "36022fb7247314fda2c22277febe752ed7fc8736101fb461510157031a521a5c"
+  
 
   def install
     libexec.install Dir["*"]
