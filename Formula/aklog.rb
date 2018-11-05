@@ -14,4 +14,8 @@ class Aklog < Formula
     inreplace bin/"aklog", "exe_path", "#{libexec}"
   end
 
+  test do
+    system "false"
+  end
+
 end
