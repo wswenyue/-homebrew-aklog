@@ -4,8 +4,8 @@
 class Aklog < Formula
   desc "Android developer's Swiss Army Knife for Log"
   homepage "https://github.com/wswenyue/aklog"
-  url "https://github.com/wswenyue/aklog/archive/v5.3.6.tar.gz"
-  sha256 "f31a3a493ca540c2b662df84f88d3c7bdc1b9549c34da701f8d4b8261f2b3289"
+  url "https://github.com/wswenyue/aklog/archive/v5.3.7.tar.gz"
+  sha256 "ebfef96e85d9fd24f508f5c3b026686b97d5b905eed70200995ebd0bb3e6b806"
 
 
   def install
