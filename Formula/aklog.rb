@@ -4,10 +4,11 @@
 class Aklog < Formula
   desc "Android developer's Swiss Army Knife for Log"
   homepage "https://github.com/wswenyue/aklog"
-  url "https://github.com/wswenyue/aklog/archive/v5.3.15.tar.gz"
-  sha256 "d0efcaf6332307fd3aad0af3e61330fb07d1f90fdc6d78dd56e92ac114962224"
-  version '5.3.15'
+  url "https://github.com/wswenyue/aklog/archive/v5.3.16.tar.gz"
+  sha256 "9cdbe9c25b689f7a690d644735b20df8613efac393efad24422d8aa307f4204a"
+  version '5.3.16'
 
+  depends_on :python3
 
   def install
     libexec.install Dir["*"]
@@ -16,7 +17,7 @@ class Aklog < Formula
   end
 
   test do
-    system "false"
+    system bin/"aklog", "--version"
   end
 
 end
