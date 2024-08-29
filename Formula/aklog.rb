@@ -4,21 +4,21 @@
 class Aklog < Formula
   desc "Android or Harmony developer's Swiss Army Knife for Log"
   homepage "https://github.com/wswenyue/aklog"
-  url "https://github.com/wswenyue/aklog/archive/v5.3.20.tar.gz"
-  sha256 "1fef4a4fe01459bb904a6ecc4d1704002d9f4db33406e3574c980e337a6600b2"
-  version '5.3.20'
+  url "https://github.com/wswenyue/aklog/archive/v5.3.21.tar.gz"
+  sha256 "cd3690dae75dfd49eb1e7897ead22866425ac5c4a9ee481652bae2efb614b960"
+  version '5.3.21'
 
   def install
     libexec.install Dir["*"]
     bin.install libexec/"aklog" => "aklog"
-    bin.install libexec/"hilog" => "hilog"
+    bin.install libexec/"akhos" => "akhos"
     inreplace bin/"aklog", "exe_path", "#{libexec}"
-    inreplace bin/"hilog", "exe_path", "#{libexec}"
+    inreplace bin/"akhos", "exe_path", "#{libexec}"
   end
 
   test do
     system bin/"aklog", "--version"
-    system bin/"hilog", "--version"
+    system bin/"akhos", "--version"
   end
 
 end
