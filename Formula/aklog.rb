@@ -4,9 +4,9 @@
 class Aklog < Formula
   desc "Android or Harmony developer's Swiss Army Knife for Log"
   homepage "https://github.com/wswenyue/aklog"
-  url "https://github.com/wswenyue/aklog/archive/v5.3.22.tar.gz"
-  sha256 "f43d2d7c29c98e4b1471a14d3976ce588e008d8e19089be61305310f7a368ac8"
-  version '5.3.22'
+  url "https://github.com/wswenyue/aklog/archive/v5.3.23.tar.gz"
+  sha256 "cf3919c0b178cdb3d882c8c4bba18b774399aacd28a1a091e21ce868f8e334e7"
+  version '5.3.23'
 
   def install
     libexec.install Dir["*"]
@@ -14,6 +14,15 @@ class Aklog < Formula
     bin.install libexec/"akhos" => "akhos"
     inreplace bin/"aklog", "exe_path", "#{libexec}"
     inreplace bin/"akhos", "exe_path", "#{libexec}"
+  end
+
+  def post_install
+    Dir["#{libexec}/lib/*.dylib"].each do |dylib|
+      chmod 0664, dylib
+      MachO::Tools.change_dylib_id(dylib, "@rpath/#{File.basename(dylib)}")
+      MachO.codesign!(dylib) if Hardware::CPU.arm?
+      chmod 0444, dylib
+    end
   end
 
   test do
