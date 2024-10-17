@@ -4,9 +4,9 @@
 class Aklog < Formula
   desc "Android or Harmony developer's Swiss Army Knife for Log"
   homepage "https://github.com/wswenyue/aklog"
-  url "https://github.com/wswenyue/aklog/archive/v5.3.21.tar.gz"
-  sha256 "cd3690dae75dfd49eb1e7897ead22866425ac5c4a9ee481652bae2efb614b960"
-  version '5.3.21'
+  url "https://github.com/wswenyue/aklog/archive/v5.3.22.tar.gz"
+  sha256 "f43d2d7c29c98e4b1471a14d3976ce588e008d8e19089be61305310f7a368ac8"
+  version '5.3.22'
 
   def install
     libexec.install Dir["*"]
